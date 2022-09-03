@@ -10,7 +10,6 @@ const ErrorPopup: React.FC = () => {
   useEffect(() => {
     const onClick = (e: any) => {
       rootEl.current.contains(e.target) || setVisible(false);
-      console.log(visible);
       setError(null);
     };
     document.addEventListener("click", onClick);
@@ -20,7 +19,6 @@ const ErrorPopup: React.FC = () => {
     if (error) {
       setVisible(true);
     }
-    console.log(error, "he", visible);
   }, [error]);
   return (
     <div
